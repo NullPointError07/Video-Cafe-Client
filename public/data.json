@@ -1,0 +1,102 @@
+[
+  {
+    "song_title": "Shape of You",
+    "singer_name": "Ed Sheeran",
+    "song_link": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+    "release_Date": "2017-01-06",
+    "genre": "Pop",
+    "views": 5163195641,
+    "lyrics": "The club isn't the best place to find a lover...",
+    "thumbnail_url": "https://example.com/shape_of_you_thumbnail.jpg",
+    "song_duration": "3:53"
+  },
+  {
+    "song_title": "Rolling in the Deep",
+    "singer_name": "Adele",
+    "song_link": "https://www.youtube.com/watch?v=rYEDA3JcQqw",
+    "release_Date": "2010-11-29",
+    "genre": "Soul",
+    "views": 2037014291,
+    "lyrics": "We could have had it all...",
+    "thumbnail_url": "https://example.com/rolling_in_the_deep_thumbnail.jpg",
+    "song_duration": "4:54"
+  },
+  {
+    "song_title": "Bohemian Rhapsody",
+    "singer_name": "Queen",
+    "song_link": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ",
+    "release_Date": "1975-10-31",
+    "genre": "Rock",
+    "views": 1257597621,
+    "lyrics": "Is this the real life? Is this just fantasy?...",
+    "thumbnail_url": "https://example.com/bohemian_rhapsody_thumbnail.jpg",
+    "song_duration": "5:55"
+  },
+  {
+    "song_title": "Despacito",
+    "singer_name": "Luis Fonsi",
+    "song_link": "https://www.youtube.com/watch?v=kJQP7kiw5Fk",
+    "release_Date": "2017-01-12",
+    "genre": "Reggaeton",
+    "views": 7986452553,
+    "lyrics": "¡Ay! Fonsi, DY, Oh-oh-oh-oh-oh, no, oh, no...",
+    "thumbnail_url": "https://example.com/despacito_thumbnail.jpg",
+    "song_duration": "4:41"
+  },
+  {
+    "song_title": "Uptown Funk",
+    "singer_name": "Mark Ronson ft. Bruno Mars",
+    "song_link": "https://www.youtube.com/watch?v=OPf0YbXqDm0",
+    "release_Date": "2014-11-19",
+    "genre": "Funk",
+    "views": 4523585486,
+    "lyrics": "This hit, that ice cold, Michelle Pfeiffer, that white gold...",
+    "thumbnail_url": "https://example.com/uptown_funk_thumbnail.jpg",
+    "song_duration": "4:30"
+  },
+  {
+    "song_title": "Billie Jean",
+    "singer_name": "Michael Jackson",
+    "song_link": "https://www.youtube.com/watch?v=Zi_XLOBDo_Y",
+    "release_Date": "1983-01-02",
+    "genre": "Pop",
+    "views": 694594279,
+    "lyrics": "She was more like a beauty queen from a movie scene...",
+    "thumbnail_url": "https://example.com/billie_jean_thumbnail.jpg",
+    "song_duration": "4:54"
+  },
+  {
+    "song_title": "Shape of My Heart",
+    "singer_name": "Sting",
+    "song_link": "https://www.youtube.com/watch?v=LB5YkmjalDg",
+    "release_Date": "1993-06-25",
+    "genre": "Pop",
+    "views": 216258675,
+    "lyrics": "He deals the cards as a meditation...",
+    "thumbnail_url": "https://example.com/shape_of_my_heart_thumbnail.jpg",
+    "song_duration": "4:39"
+  },
+  {
+    "song_title": "Hotel California",
+    "singer_name": "Eagles",
+    "song_link": "https://www.youtube.com/watch?v=lrfhf1Gv4Tw",
+    "release_Date": "1976-12-08",
+    "genre": "Rock",
+    "views": 1000196543,
+    "lyrics": "On a dark desert highway, cool wind in my hair...",
+    "thumbnail_url": "https://example.com/hotel_california_thumbnail.jpg",
+    "song_duration": "6:31"
+  },
+  {
+    "song_title": "Wonderwall",
+    "singer_name": "Oasis",
+    "song_link": "https://www.youtube.com/watch?v=bx1Bh8ZvH84",
+    "release_Date": "1995-10-30",
+    "genre": "Rock",
+    "views": 1425324830,
+    "lyrics": "Today is gonna be the day that they're gonna throw it back to you...",
+    "thumbnail_url": "https://example.com/wonderwall_thumbnail.jpg",
+    "song_duration": "4:40"
+  }
+]
+

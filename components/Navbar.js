@@ -11,10 +11,14 @@ const Navbar = () => {
     setActiveDropDown(index === !activeDropDown ? null : index);
   };
 
+  // const toggleAccount = () => {
+  //   setActiveDropDown(!activeDropDown);
+  // };
+
   const navItems = ["Home", "Video Menu", "Extra Page"];
 
   return (
-    <div className="flex justify-evenly bg-white text-black py-5 text-xl">
+    <div className="sticky top-0 flex justify-evenly bg-white text-black py-5 text-xl">
       <div>
         <h1 className="flex items-center space-x-2">
           Video <PiTelevisionSimpleBold />
@@ -41,14 +45,14 @@ const Navbar = () => {
           </h1>
         ))}
       </div>
-      {activeDropDown && (
+      {/* {activeDropDown && (
         <div>
           <h1>Home Page Version 1</h1>
           <h1>Home Page Version 2</h1>
           <h1>Home Page Version 3</h1>
           <h1>Home Page Version 4</h1>
         </div>
-      )}
+      )} */}
       <div>
         <button className="flex items-center hover:text-orange-500">
           <h1>My Account</h1>
