@@ -31,3 +31,17 @@ export async function POST(request) {
     { status: 201 }
   );
 }
+
+
+export async function GET() {
+  await connectMongoDB();
+  const videos = await video.find()
+  return NextResponse.json({videos})
+}
+
+export async function DELETE() {
+  const id = request.nextUrl.searchParams.get("id")
+  await connectMongoDB();
+  await video.findByIdAndDelete(id)
+  return NextResponse.json({message: "Video Deleted"}, {status:200})
+}
