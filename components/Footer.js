@@ -2,7 +2,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-600 text-white text-left py-10 mt-10">
+    <div className="bg-gray-600 text-white text-left py-10 pt-10">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-10 pl-10">
         <div className="left-content">
           <h1 className="text-2xl mb-4">VIDEO Cafe</h1>
