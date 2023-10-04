@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const SearchBar = () => {
   return (
-    <div className="flex justify-between lg:mx-20 my-10 text-left">
+    <div className="flex justify-between lg:px-20 py-10 text-left bg-white text-black">
       <button className="border-2 pr-20 pl-2">Genre</button>
       <div className="flex items-center py-5">
         <input
