@@ -1,12 +1,14 @@
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <div className="bg-gray-600 text-white text-left py-10 pt-10">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-10 pl-10">
         <div className="left-content">
-          <h1 className="text-2xl mb-4">VIDEO Cafe</h1>
-          <h1 className="font-bold text-5xl mb-5">
+          <h1 className="text-3xl lg:text-5xl mb-4">VIDEO Cafe</h1>
+          <h1 className="font-bold text-xl lg:text-3xl mb-5">
             Upload Videos & Share All OverWorld
           </h1>
           <p className="text-lg">
@@ -40,15 +42,15 @@ const Footer = () => {
             <p>videocafe@mail.net</p>
             <p>+1 425 326 16 27</p>
             <div className="flex space-x-2">
-              {/* <Link href={"https://www.facebook.com/"}>
-                    <BsFacebook />
-                  </Link>
-                  <Link href={"https://www.instagram.com/"}>
-                    <BsInstagram />
-                  </Link>
-                  <Link href={"https://www.twitter.com/"}>
-                    <BsTwitter />
-                  </Link> */}
+              <Link href={"https://www.facebook.com/"}>
+                <BsFacebook />
+              </Link>
+              <Link href={"https://www.instagram.com/"}>
+                <BsInstagram />
+              </Link>
+              <Link href={"https://www.twitter.com/"}>
+                <BsTwitter />
+              </Link>
             </div>
           </div>
         </div>

@@ -32,16 +32,15 @@ export async function POST(request) {
   );
 }
 
-
 export async function GET() {
   await connectMongoDB();
-  const videos = await video.find()
-  return NextResponse.json({videos})
+  const videos = await video.find();
+  return NextResponse.json({ videos });
 }
 
-export async function DELETE() {
-  const id = request.nextUrl.searchParams.get("id")
+export async function DELETE(request) {
+  const id = request.nextUrl.searchParams.get("id");
   await connectMongoDB();
-  await video.findByIdAndDelete(id)
-  return NextResponse.json({message: "Video Deleted"}, {status:200})
+  await video.findByIdAndDelete(id);
+  return NextResponse.json({ message: "Video Deleted" }, { status: 200 });
 }

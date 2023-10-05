@@ -5,10 +5,13 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { PiTelevisionSimpleBold } from "react-icons/pi";
 import { AiOutlineClose } from "react-icons/ai";
 import { LuAlignCenter } from "react-icons/lu";
+import LoginModal from "./LoginModal";
 
 const Navbar = () => {
   const [activeDropDown, setActiveDropDown] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [accountOpen, setAccountOpen] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   const toggleDropDown = (index) => {
     setActiveDropDown(index === !activeDropDown ? null : index);
@@ -18,9 +21,13 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  // const toggleAccount = () => {
-  //   setActiveDropDown(!activeDropDown);
-  // };
+  const toggleAccount = () => {
+    setAccountOpen(!accountOpen);
+  };
+
+  const toggleLoginModal = () => {
+    setShowLoginModal(!showLoginModal);
+  };
 
   const navItems = ["Home", "Video Menu", "Extra Page"];
 
@@ -54,12 +61,27 @@ const Navbar = () => {
       </div>
 
       <div>
-        <button className="hidden md:block">
+        <button onClick={toggleAccount} className="hidden md:block">
           <h1 className="flex items-center hover:text-orange-500">
-            My Account <RiArrowDropDownLine />
+            My Account
+            {accountOpen ? (
+              <RiArrowDropDownLine className="ml-2 transform rotate-180" />
+            ) : (
+              <RiArrowDropDownLine className="ml-2 " />
+            )}
           </h1>
         </button>
       </div>
+
+      {accountOpen && (
+        <div className="hidden md:block w-full md:w-40 absolute z-10 right-20 top-14  bg-white text-left py-2 px-8 mt-2">
+          <button onClick={toggleLoginModal}>Login</button>
+          <button>SignUp</button>
+          <button>Demo </button>
+        </div>
+      )}
+
+      {showLoginModal && <LoginModal toggleLoginModal={toggleLoginModal} />}
 
       <button onClick={toggleNavbar} className="md:hidden text-3xl ">
         {isOpen ? <AiOutlineClose /> : <LuAlignCenter />}

@@ -23,3 +23,30 @@
 //     console.log(error);
 //   }
 // };
+
+import Image from "next/image";
+
+const SearchBar = () => {
+  return (
+    <div className="flex justify-between lg:px-20 py-10 text-left bg-white text-black">
+      <button className="border bg-gray-300 px-3">Sort By</button>
+      <div className="flex items-center py-5">
+        <input
+          type="search"
+          className="border-0"
+          placeholder="Search Here"
+        ></input>
+        <button>
+          <Image
+            src="/searchIcon.jpg"
+            alt="Search Icon"
+            width={24}
+            height={24}
+          />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default SearchBar;

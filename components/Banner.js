@@ -11,11 +11,11 @@ const Banner = () => {
         layout="fill"
         objectFit="cover"
       />
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-white">
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4">
           Upload Your Videos & Share Online
         </h1>
-        <p className="text-lg sm:text-xl mb-4">
+        <p className="text-lg sm:text-xl mb-4 ">
           Share Your Moment Online Easily
         </p>
         <div className="border-2 p-6 bg-white rounded-lg">
