@@ -1,25 +1,10 @@
 "use client";
 
-import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import { TbCategory, TbPlayerPlay } from "react-icons/tb";
 import DeleteVideo from "./DeleteVideo";
 import SearchBar from "./SearchBar";
-import { useEffect, useState } from "react";
-
-// const getVideos = () => {
-//   return fetch("http://localhost:3000/api/videos", {
-//     cache: "no-store",
-//   })
-//     .then((res) => {
-//       if (!res.ok) {
-//         throw new Error("Failed to fetch");
-//       }
-//       return res.json();
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// };
+import Link from "next/link";
 
 const formatDate = (date) => {
   const newDate = date.split("-");
@@ -33,6 +18,8 @@ function convertToBillions(number) {
 const VideoList = () => {
   const [videos, setVideos] = useState([]);
   const [filteredVideos, setFilteredVideos] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(3); // Number of items to display per page
 
   useEffect(() => {
     // Fetch video data when the component mounts
@@ -71,10 +58,26 @@ const VideoList = () => {
     }
   };
 
+  // Calculate index range for current page
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredVideos.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Create a function to handle page changes
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  // Create an array of page numbers
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(filteredVideos.length / itemsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
   return (
     <div>
       <SearchBar searchFunc={handleSearch} />
-      <div className="py-10 px-10 lg:px-20 bg-gray-800 ">
+      <div className="py-10 px-10 lg:px-20 bg-gray-800">
         <div className="mb-6 border-b-2 pb-8 pt-4 relative overflow-auto">
           <div className="static top-10 right-10 lg:right-20 z-10 border-2 rounded-2xl p-3  hover:bg-orange-600">
             <Link href={"/addVideos"}>
@@ -83,8 +86,8 @@ const VideoList = () => {
           </div>
         </div>
         <div>
-          <ul className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-lg">
-            {filteredVideos.map((video) => (
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-lg ease-in-out duration-200">
+            {currentItems.map((video) => (
               <li key={video._id} className="border-2 rounded-lg px-3 py-2">
                 <div style={{ position: "relative", textAlign: "center" }}>
                   <img
@@ -131,6 +134,21 @@ const VideoList = () => {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="flex justify-center mt-4 space-x-2">
+          {pageNumbers.map((pageNumber) => (
+            <button
+              key={pageNumber}
+              onClick={() => paginate(pageNumber)}
+              className={`${
+                currentPage === pageNumber
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-300"
+              } rounded-full w-10 h-10 hover:bg-blue-700`}
+            >
+              {pageNumber}
+            </button>
+          ))}
         </div>
       </div>
     </div>

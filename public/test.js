@@ -50,3 +50,18 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
+
+// const getVideos = () => {
+//   return fetch("http://localhost:3000/api/videos", {
+//     cache: "no-store",
+//   })
+//     .then((res) => {
+//       if (!res.ok) {
+//         throw new Error("Failed to fetch");
+//       }
+//       return res.json();
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// };
